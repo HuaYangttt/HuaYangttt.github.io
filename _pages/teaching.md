@@ -2,11 +2,18 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Teaching Experience.
 nav: true
 nav_order: 6
 ---
+During my PhD program, I served as a teaching assistant for the following courses at NCSU.  
+I enjoy helping students master skills on analytical thinking, mathematics, and programming.
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+- **NCSU CSC 533**: [Privacy in the Digital Age](https://catalog.ncsu.edu/course-descriptions/csc/) (Fall 2025)  
+- **NCSU CSC 422**: [Introduction to Data Science](https://archive.csc.ncsu.edu/courses/outcomes.php?uniq_id=17500075) (Spring 2025)  
+- **NCSU CSC 326**: [Software Engineering](https://archive.csc.ncsu.edu/courses/outcomes.php?uniq_id=14000030) (Fall 2024)  
 
-Organize your courses by years, topics, or universities, however you like!
+
+
+
+
