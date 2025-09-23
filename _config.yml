@@ -7,7 +7,7 @@ first_name: Hua
 middle_name: 
 last_name: Yang
 contact_note: >
-  You can contact me via [email](hyang45@ncsu.edu).
+  You can contact me via email: hyang45@ncsu.edu.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   PhD student in Computer Science at North Carolina State University | Researcher in LLMs/AI4SE/Security/Privacy.
 footer_text: >
