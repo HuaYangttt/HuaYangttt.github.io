@@ -6,7 +6,7 @@ subtitle: <a href='https://ncsu-softmax.github.io/'>SoftMax Lab</a> at <a href='
 
 profile:
   align: right
-  image: hua_2.jpg
+  image: hua_2.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>3228 Engineering Building II (EB2)</p>
