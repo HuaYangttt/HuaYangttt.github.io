@@ -4,7 +4,7 @@ title: Privacy Risks of Personally Identifiable Information in LLMs4Code
 description: Causal analysis of heterogeneous PII leakage risks in LLMs for Code
 img: assets/img/pii.jpeg
 importance: 3
-category: research
+category: work
 related_publications: true
 ---
 

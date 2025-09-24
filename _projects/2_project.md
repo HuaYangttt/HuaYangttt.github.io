@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Movie Recommendation Web App Integrating LLMs
-description: AI-driven movie recommendation system with collaborative development
-img: assets/img/13.jpg
+description: LLMs-enhanced movie recommendation system with collaborative development
+img: assets/img/p2.png
 importance: 2
 category: work
 related_publications: false

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Evading Membership Inference in Code LLMs via Semantically Equivalent Transformations
-description: Investigating transformation-based obfuscation and its impact on license compliance enforcement
-img: assets/img/llm2.jpg
+description: Investigating how will the semantically equivalent code transformation impact the training result of LLMs4Code
+img: assets/img/llm2.jpeg
 importance: 1
 category: work
 related_publications: true
