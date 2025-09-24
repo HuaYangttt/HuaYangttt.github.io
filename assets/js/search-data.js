@@ -410,12 +410,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-evading-membership-inference-in-code-llms-via-semantically-equivalent-transformations",
           title: 'Evading Membership Inference in Code LLMs via Semantically Equivalent Transformations',
-          description: "Investigating transformation-based obfuscation and its impact on license compliance enforcement",
+          description: "Investigating how will the semantically equivalent code transformation impact the training result of LLMs4Code",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-movie-recommendation-web-app-integrating-llms",
           title: 'Movie Recommendation Web App Integrating LLMs',
-          description: "AI-driven movie recommendation system with collaborative development",
+          description: "LLMs-enhanced movie recommendation system with collaborative development",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-privacy-risks-of-personally-identifiable-information-in-llms4code",
