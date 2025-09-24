@@ -7,17 +7,16 @@ importance: 1
 category: work
 related_publications: true
 ---
-The success of **Large Language Models for Code (LLMs4Code)** relies on vast amounts of code data, including **public open-source repositories** (e.g., GitHub) and **private, confidential company code**.  
-This raises concerns about **intellectual property compliance** and the potential **unauthorized use of license-restricted code**.  
+The success of **Large Language Models for Code (LLMs4Code)** relies on vast amounts of code data, including **public open-source repositories** (e.g., GitHub) and **private, confidential company code**. This raises concerns about **intellectual property compliance** and the potential **unauthorized use of license-restricted code**.  
 
 **Membership Inference (MI)** techniques have been proposed to detect such unauthorized usage. However, their effectiveness can be undermined by **semantically equivalent code transformation (SECT) rules**, which modify code syntax while preserving semantics.
 
 ---
 
 ### 🔎 Research Questions
-- Can **semantically equivalent code transformations** be leveraged to **evade MI detection**?  
-- Do different transformation rules vary in their **effectiveness**?  
-- Is there a **causal relationship** between transformations and MI evasion?
+- How does each transformation rule impact membership inference? 
+- How do combined transformation rules impact membership inference?
+- To what extent does each transformation rule impact the success of MI?
 
 ---
 

@@ -9,14 +9,7 @@ related_publications: true
 ---
 
 **Large Language Models for Code (LLMs4Code)** have significantly enhanced developer productivity in real-world software engineering.  
-However, their reliance on **open-source repositories (e.g., GitHub)** introduces severe privacy risks, as these repositories contain abundant **Personally Identifiable Information (PII)** such as:
-
-- key  
-- username  
-- email  
-- password  
-- name  
-- ip address 
+However, their reliance on **open-source repositories (e.g., GitHub)** introduces severe privacy risks, as these repositories contain abundant **Personally Identifiable Information (PII)** such as: key, username, email, password, name, and ip address.
 
 Sensitive PII can be memorized during training and later resurfaced during inference, leading to **critical privacy breaches**. Prior studies have shown that commercial code completion models are indeed capable of reproducing sensitive PII, further exacerbating concerns about the trustworthiness and compliance of LLMs4Code in sensitive industries.  
 
@@ -25,8 +18,9 @@ Nonetheless, existing work has largely treated PII as a **homogeneous category**
 ---
 
 ### 🔎 Research Questions
-We ask: **Do different PII types vary in their likelihood of being learned and leaked by LLMs4Code?**  
-And further: **Is this relationship causal, driven by training dynamics?**
+1. Do different types of PII exhibit varying degrees of learning difficulty during model training?
+2. Does the learning difficulty of different PII types affect their likelihood of being leaked during attack?
+3. What is the causal relationship between the learning dynamics of different PII types and their likelihood of being leaked during inference?
 
 ---
 
@@ -59,10 +53,10 @@ This provides the **first causal evidence** that leakage risks differ by PII typ
 ---
 
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
+  <div class="col-sm-6 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/pii-leakage.jpeg" title="Causal Graph of PII Leakage Risks" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
+  <div class="col-sm-6 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/pii-types.jpeg" title="Examples of PII Types" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
