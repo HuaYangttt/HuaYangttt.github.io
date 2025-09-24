@@ -1,81 +1,72 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Privacy Risks of Personally Identifiable Information in LLMs4Code
+description: Causal analysis of heterogeneous PII leakage risks in LLMs for Code
+img: assets/img/pii.jpeg
 importance: 3
-category: work
+category: research
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Large Language Models for Code (LLMs4Code)** have significantly enhanced developer productivity in real-world software engineering.  
+However, their reliance on **open-source repositories (e.g., GitHub)** introduces severe privacy risks, as these repositories contain abundant **Personally Identifiable Information (PII)** such as:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- key  
+- username  
+- email  
+- password  
+- name  
+- ip address 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Sensitive PII can be memorized during training and later resurfaced during inference, leading to **critical privacy breaches**. Prior studies have shown that commercial code completion models are indeed capable of reproducing sensitive PII, further exacerbating concerns about the trustworthiness and compliance of LLMs4Code in sensitive industries.  
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Nonetheless, existing work has largely treated PII as a **homogeneous category**, overlooking the heterogeneous risks posed by different PII types.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### 🔎 Research Questions
+We ask: **Do different PII types vary in their likelihood of being learned and leaked by LLMs4Code?**  
+And further: **Is this relationship causal, driven by training dynamics?**
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
+### 🛠️ Methodology
+Our study follows a **four-stage pipeline**:
 
-```html
+1. **Dataset Construction**  
+   Building a high-quality dataset with a diverse set of PII types from real-world repositories.  
+   This combines regex-based filters, LLM-assisted judgments, heuristic rules, and human verification.
+
+2. **Model Fine-Tuning**  
+   Fine-tuning representative LLMs4Code of **different scales and architectures** to capture cross-family patterns.
+
+3. **Training Dynamics Computation**  
+   Measuring model learnability and difficulty on real PII data.
+
+4. **Causal Inference**  
+   Formulating a **structural causal model** to estimate the causal effect of learning difficulty on leakage, validated with multiple refutation strategies.
+
+---
+
+### 📊 Results
+- Leakage risks vary **significantly** across PII types.  
+- **Easy-to-learn instances** (e.g., ip address) → **high leakage risks**.  
+- **Hard-to-learn instances** (e.g., key, password) → **lower leakage frequency**.  
+- **Ambiguous types** display complex dual effects.  
+
+This provides the **first causal evidence** that leakage risks differ by PII type, offering **actionable insights** for designing **type-aware and learnability-aware defense mechanisms** in LLMs4Code.
+
+---
+
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/pii-leakage.jpeg" title="Causal Graph of PII Leakage Risks" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/pii-types.jpeg" title="Examples of PII Types" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
-
-{% endraw %}
+<div class="caption">
+  Left: Structural causal model illustrating relationships between training dynamics and PII leakage risks.  
+  Right: Representative examples of heterogeneous PII types in real-world repositories.
+</div>
