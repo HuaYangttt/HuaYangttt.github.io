@@ -1,9 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"ICSE":
+  url: https://conf.researchr.org/home/icse-2026
+  color: "#b71c1c"
+
+"TAFFC":
+  url: https://www.computer.org/csdl/journal/ta
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"BIBM":
+  url: https://ieeebibm.org/
+  color: "#00695c"
 
-"Vision":
-  color: "#009f36"
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"

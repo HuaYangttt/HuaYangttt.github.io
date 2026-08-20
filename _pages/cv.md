@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-description: cv up to Sep 2025.
+description: cv up to Aug 2026.
 ---
 
 <div class="text-center mb-4">

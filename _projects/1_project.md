@@ -1,12 +1,14 @@
 ---
 layout: page
 title: Evading Membership Inference in Code LLMs via Semantically Equivalent Transformations
-description: Investigating how will the semantically equivalent code transformation impact the training result of LLMs4Code
+description: A causal study of how semantically equivalent code transformations weaken membership inference on code LLMs — ICSE 2026
 img: assets/img/llm2.jpeg
 importance: 1
 category: work
 related_publications: true
 ---
+**Sep 2024 – May 2025** · Published at **ICSE 2026** {% cite sect_mia %}
+
 The success of **Large Language Models for Code (LLMs4Code)** relies on vast amounts of code data, including **public open-source repositories** (e.g., GitHub) and **private, confidential company code**. This raises concerns about **intellectual property compliance** and the potential **unauthorized use of license-restricted code**.  
 
 **Membership Inference (MI)** techniques have been proposed to detect such unauthorized usage. However, their effectiveness can be undermined by **semantically equivalent code transformation (SECT) rules**, which modify code syntax while preserving semantics.
@@ -37,7 +39,7 @@ We conducted a **systematic investigation** across multiple transformation rules
 
 ---
 
-**Tech Stack:** Python, Java, PyTorch, Hugging Face, GitHub, CUDA  
+**Tech Stack:** Python, Java, PyTorch, Hugging Face, DeepSpeed, CUDA, SFT, Causal Inference  
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">

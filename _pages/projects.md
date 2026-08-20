@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: projects up to Sep 2025.
+description: selected research and engineering projects, up to Aug 2026.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [work]
 horizontal: false
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: Movie Recommendation Web App Integrating LLMs
 description: LLMs-enhanced movie recommendation system with collaborative development
 img: assets/img/p2.png
-importance: 2
+importance: 5
 category: work
 related_publications: false
 ---

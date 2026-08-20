@@ -3,10 +3,12 @@ layout: page
 title: Privacy Risks of Personally Identifiable Information in LLMs4Code
 description: Causal analysis of heterogeneous PII leakage risks in LLMs for Code
 img: assets/img/pii.jpeg
-importance: 3
+importance: 2
 category: work
 related_publications: true
 ---
+
+**Aug 2025 – Jan 2026** · Preprint {% cite pii_causal %}
 
 **Large Language Models for Code (LLMs4Code)** have significantly enhanced developer productivity in real-world software engineering.  
 However, their reliance on **open-source repositories (e.g., GitHub)** introduces severe privacy risks, as these repositories contain abundant **Personally Identifiable Information (PII)** such as: key, username, email, password, name, and ip address.
@@ -28,11 +30,11 @@ Nonetheless, existing work has largely treated PII as a **homogeneous category**
 Our study follows a **four-stage pipeline**:
 
 1. **Dataset Construction**  
-   Building a high-quality dataset with a diverse set of PII types from real-world repositories.  
-   This combines regex-based filters, LLM-assisted judgments, heuristic rules, and human verification.
+   Building a high-quality dataset of **9,000 real-world code files across 6 PII types**.  
+   This combines regex-based filters, LLM-assisted judgments, heuristic rules, and expert verification.
 
 2. **Model Fine-Tuning**  
-   Fine-tuning representative LLMs4Code of **different scales and architectures** to capture cross-family patterns.
+   Fine-tuning **6 code LLMs (3B–14B)** across the **Stable Code**, **CodeLlama**, and **Qwen2.5-Coder** families to capture cross-family patterns.
 
 3. **Training Dynamics Computation**  
    Measuring model learnability and difficulty on real PII data.
@@ -64,3 +66,7 @@ This provides the **first causal evidence** that leakage risks differ by PII typ
   Left: Structural causal model illustrating relationships between training dynamics and PII leakage risks.  
   Right: Representative examples of heterogeneous PII types in real-world repositories.
 </div>
+
+---
+
+**Tech Stack:** LoRA, PyTorch, Hugging Face, DoWhy, Causal Inference, Dataset Cartography

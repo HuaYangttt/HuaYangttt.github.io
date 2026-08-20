@@ -1,24 +1,68 @@
 ---
 ---
 
+@INPROCEEDINGS{sect_mia,
+  abbr={ICSE},
+  author={Yang, Hua and Velasco, Alejandro and Le-Cong, Thanh and Haque, Md Nazmul and Xu, Bowen and Poshyvanyk, Denys},
+  booktitle={Proceedings of the 48th IEEE/ACM International Conference on Software Engineering (ICSE)},
+  title={How Do Semantically Equivalent Code Transformations Impact Membership Inference on LLMs for Code?},
+  year={2026},
+  abstract={The success of Large Language Models for Code (LLMs4Code) relies on vast amounts of code data, including public open-source repositories and private, confidential company code, raising concerns about intellectual property compliance and the unauthorized use of license-restricted code. Membership inference (MI) has been proposed to detect such unauthorized usage, but its effectiveness may be undermined by semantically equivalent code transformation (SECT) rules. We systematically investigate how individual and combined SECT rules affect MI. Model accuracy drops by at most 1.5% per rule, showing that transformed datasets remain strong substitutes for fine-tuning, while the RenameVariable rule reduces MI success by up to 10.19%. Causal analysis confirms that variable renaming has the strongest causal effect in disrupting MI detection.},
+  arxiv={2512.15468},
+  keywords={LLMs for Code;Membership Inference;Code Transformation;Causal Inference;Privacy},
+  selected={true},
+  bibtex_show={true}
+}
+
+@ARTICLE{pii_causal,
+  abbr={arXiv},
+  author={Yang, Hua and Velasco, Alejandro and Fang, Sen and Xu, Bowen and Poshyvanyk, Denys},
+  journal={arXiv preprint arXiv:2512.07814},
+  title={Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach},
+  year={2025},
+  abstract={Large Language Models for Code are trained on open-source repositories that contain abundant Personally Identifiable Information (PII), which can be memorized during training and resurfaced at inference time. Prior work has largely treated PII as a homogeneous category, overlooking the heterogeneous risks posed by different PII types. We build a real-world dataset of 9,000 code files spanning six PII types, fine-tune six code LLMs (3B-14B) across the Stable Code, CodeLlama, and Qwen2.5-Coder families, compute training dynamics on real PII data, and formulate a structural causal model to estimate the causal effect of learning difficulty on leakage. Results show that easy-to-learn instances drive leakage while ambiguity plays a more complex, type- and scale-dependent role, providing the first causal evidence for designing type-aware and learnability-aware defenses.},
+  arxiv={2512.07814},
+  keywords={Code Models;Privacy Leakage;Personally Identifiable Information;Training Dynamics;Causal Inference},
+  selected={true},
+  bibtex_show={true}
+}
+
 @ARTICLE{eeg_mi,
+  abbr={TAFFC},
   author={Yang, Hua and Chen, C. L. Philip and Chen, Bianna and Zhang, Tong},
-  journal={IEEE Transactions on Affective Computing}, 
-  title={Improving the Interpretability Through Maximizing Mutual Information for EEG Emotion Recognition}, 
+  journal={IEEE Transactions on Affective Computing},
+  title={Improving the Interpretability Through Maximizing Mutual Information for EEG Emotion Recognition},
   year={2025},
   volume={16},
   number={2},
   pages={744-757},
   keywords={Electroencephalography;Emotion recognition;Brain modeling;Graph neural networks;Feature extraction;Affective computing;Training;EEG emotion recognition;interpretability;graph neural network;explainable artificial intelligence},
-  doi={10.1109/TAFFC.2024.3463469}}
+  doi={10.1109/TAFFC.2024.3463469},
+  selected={true},
+  bibtex_show={true}
+}
+
+@ARTICLE{quant_privacy,
+  abbr={arXiv},
+  author={Haque, Md Nazmul and Yang, Hua and Yang, Zhou and Xu, Bowen},
+  journal={arXiv preprint arXiv:2508.00128},
+  title={How Quantization Impacts Privacy Risk on LLMs for Code?},
+  year={2025},
+  arxiv={2508.00128},
+  keywords={LLMs for Code;Quantization;Privacy Risk;Membership Inference},
+  bibtex_show={true}
+}
 
 @INPROCEEDINGS{FACExplainer,
+  abbr={BIBM},
   author={Yang, Hua and Philip Chen, C. L. and Chen, Bianna and Zhang, Tong},
-  booktitle={2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)}, 
-  title={FACExplainer: Generating Model-faithful Explanations for Graph Neural Networks Guided by Spatial Information}, 
+  booktitle={2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  title={FACExplainer: Generating Model-faithful Explanations for Graph Neural Networks Guided by Spatial Information},
   year={2023},
   volume={},
   number={},
   pages={718-725},
   keywords={Convolution;Source coding;Biological system modeling;Benchmark testing;Graph neural networks;Task analysis;Bioinformatics;Interpretability;Graph Neural Network;Post-hoc Explainer},
-  doi={10.1109/BIBM58861.2023.10385740}}
+  doi={10.1109/BIBM58861.2023.10385740},
+  bibtex_show={true}
+}
